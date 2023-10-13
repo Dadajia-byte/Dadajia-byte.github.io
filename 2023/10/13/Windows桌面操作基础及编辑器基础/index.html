@@ -1,0 +1,827 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Windows桌面操作基础 | 哒哒佳</title><meta name="author" content="Dadajia-byte"><meta name="copyright" content="Dadajia-byte"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="Windows 桌面操作基础 学习目标完成下列任务 (全程不使用鼠标)  打开sublim或code等编辑器 新建一篇文档 文档内容请从其它来源进行复制、粘贴 使用查找替换功能完成某一处文本的编写 保存为C:\mydoc\post.md  。注意该目录不得预先创建   理解进程、窗口与焦点；前台应用与后台服务等概念，掌握常用快捷键   Windows 简介 Microsoft Windows,是美">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows桌面操作基础">
+<meta property="og:url" content="https://dadajia-byte.github.io.git/2023/10/13/Windows%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E5%9F%BA%E7%A1%80%E5%8F%8A%E7%BC%96%E8%BE%91%E5%99%A8%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="哒哒佳">
+<meta property="og:description" content="Windows 桌面操作基础 学习目标完成下列任务 (全程不使用鼠标)  打开sublim或code等编辑器 新建一篇文档 文档内容请从其它来源进行复制、粘贴 使用查找替换功能完成某一处文本的编写 保存为C:\mydoc\post.md  。注意该目录不得预先创建   理解进程、窗口与焦点；前台应用与后台服务等概念，掌握常用快捷键   Windows 简介 Microsoft Windows,是美">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dadajia-byte.github.io.git/img/dahuai.jpg">
+<meta property="article:published_time" content="2023-10-13T03:36:34.000Z">
+<meta property="article:modified_time" content="2023-10-13T09:30:17.844Z">
+<meta property="article:author" content="Dadajia-byte">
+<meta property="article:tag" content="基础">
+<meta property="article:tag" content="windows操作">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dadajia-byte.github.io.git/img/dahuai.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://dadajia-byte.github.io.git/2023/10/13/Windows%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E5%9F%BA%E7%A1%80%E5%8F%8A%E7%BC%96%E8%BE%91%E5%99%A8%E5%9F%BA%E7%A1%80/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/Titillium%20Web,%20'PingFang%20SC',%20'Hiragino%20Sans%20GB',%20'Microsoft%20JhengHei',%20'Microsoft%20YaHei',%20sans-serif" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Dadajia-byte","link":"链接: ","source":"来源: 哒哒佳","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Windows桌面操作基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-10-13 17:30:17'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (true) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/dahuai.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="哒哒佳"><span class="site-name">哒哒佳</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Windows桌面操作基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-10-13T03:36:34.000Z" title="发表于 2023-10-13 11:36:34">2023-10-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-10-13T09:30:17.844Z" title="更新于 2023-10-13 17:30:17">2023-10-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">计算机基础知识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Windows桌面操作基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Windows-桌面操作基础"><a href="#Windows-桌面操作基础" class="headerlink" title="Windows 桌面操作基础"></a>Windows 桌面操作基础</h1><hr>
+<h3 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h3><p>完成下列任务 (<u><strong>全程不使用鼠标</strong></u>)</p>
+<ul>
+<li>打开sublim或code等编辑器</li>
+<li>新建一篇文档</li>
+<li>文档内容请从其它来源进行复制、粘贴</li>
+<li>使用查找替换功能完成某一处文本的编写</li>
+<li>保存为<code>C:\mydoc\post.md</code>  。注意该目录不得预先创建</li>
+</ul>
+<blockquote>
+<p>理解进程、窗口与焦点；前台应用与后台服务等概念，掌握常用快捷键</p>
+</blockquote>
+<hr>
+<h3 id="Windows-简介"><a href="#Windows-简介" class="headerlink" title="Windows 简介"></a>Windows 简介</h3><blockquote>
+<p>Microsoft Windows,是美国微软公司研发的一套操作系统，它问世于1985年，起初仅仅是Microsoft-DOS模拟环境，其后续版本逐渐发展成为主要以个人电脑和服务器用户设计的操作系统，并最终获得了世界个人电脑操作系统的垄断地位。此操作系统可以在几种不同类型的平台上运行，如个人电脑（PC）、移动设备、服务器（Server）和嵌入式系统等等，其中在个人电脑的领域应用内最为普遍。</p>
+</blockquote>
+<p>​	Windows采用了图形化模式GUI，比起从前的DOS需要键入指令使用的方式更为人性化。随着电脑硬件和软件的不断升级，微软的Windows也在不断升级，从架构的16位、32位再到64位， 系统版本从最初的Windows 1.0 到大家熟知的Windows 95、Windows 98、Windows ME、Windows 2000、Windows 2003、Windows XP、Windows Vista、Windows 7、Windows 8、Windows 8.1、Windows 10 和 Windows Server服务器企业级操作系统，不断持续更新，微软一直在致力于Windows操作系统的开发和完善。</p>
+<p>​	lWindows操作系统目前最新的稳定性操作系统是于2015年7月29日发布的 Windows 10。Windows Server目前最新的稳定性操作系统是2016年9月26日发布的Windows Server 2016。</p>
+<h4 id="发展史"><a href="#发展史" class="headerlink" title="发展史"></a>发展史</h4><p>​	1980年3月，苹果公司的创始人史蒂夫·乔布斯在一次会议上介绍了他在硅谷施乐公司参观时发现的一项技术 – 图形用户界面（GUI，Graphic User Interface）技术，微软公司总裁比尔·盖茨听了后，也意识到这项技术潜在的价值，于是带领微软公司开始了GUI软件 – Windows的开发工作。</p>
+<p>​	1985年，微软公司正式发布了第一代窗口式多任务系统 – Windows1.0，由于当时硬件水平所限，Windows1.0并没有获得预期的社会效果，也没有发挥出它的优势。但是，该操作系统的推出，却标志着PC机开始进入了图形用户界面的时代。在图形用户界面的操作系统中，大部分操作对象都用相应的图标（Icon）来表示，这种操作界面形象直观，使计算机更贴近用户的心理特点和实际需求。</p>
+<h4 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h4><p><strong>个人操作系统（桌面级操作系统）</strong>：Windows XP 、Windows 8 、Windows 10（目前占有率最高）<br><strong>服务器操作系统</strong>：Windows Server<br><strong>手机操作系统（已退出市场）</strong>：Windows Phone</p>
+<p><strong>服务器与个人操作系统区别：</strong></p>
+<ul>
+<li>性能的稳定性，服务器要比个人用户操作系统要高得多；</li>
+<li>在文件管理或网络应用上，服务器能更好的发挥功效；</li>
+<li>在图形及娱乐上来说，个人用户操作系统要比服务器有着更好的功效；</li>
+<li>服务器操作系统的安全性及可协调性要比个人用户操作系统高；</li>
+<li>服务器版操作系统包含服务器端专用的功能和管理工具，对安全和稳定性方面也有更严格的要求，相对来说速度上就慢了些。同时服务器版还会支持特殊的硬件。</li>
+<li>普通用户的系统没有专业的功能，也没有必要，反之会加入面向个人用户媒体管理的软件和功能</li>
+</ul>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ol>
+<li>直观、高效面向对象的图形用户界面，易学易用。</li>
+<li>(最大优势)Windows是目前世界上用户最多、且兼容性最强的操作系统。</li>
+<li>用户界面统一、友好、漂亮。</li>
+<li>丰富的设备无关的图形操作。</li>
+<li>多用户、多任务。</li>
+</ol>
+<hr>
+<h3 id="Windows常见文件拓展名"><a href="#Windows常见文件拓展名" class="headerlink" title="Windows常见文件拓展名"></a>Windows常见文件拓展名</h3><table>
+<thead>
+<tr>
+<th align="center">拓展名</th>
+<th align="center">文件类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">.exe</td>
+<td align="center">可执行文件</td>
+</tr>
+<tr>
+<td align="center">.bat</td>
+<td align="center">批处理文件</td>
+</tr>
+<tr>
+<td align="center">.psl</td>
+<td align="center">powershell脚本文件</td>
+</tr>
+<tr>
+<td align="center">.txt</td>
+<td align="center">文本文件</td>
+</tr>
+<tr>
+<td align="center">.doc</td>
+<td align="center">word文件</td>
+</tr>
+<tr>
+<td align="center">.docm</td>
+<td align="center">加载宏的Word文档</td>
+</tr>
+<tr>
+<td align="center">.xml</td>
+<td align="center">可拓展标记语音编写的文件</td>
+</tr>
+<tr>
+<td align="center">.xls</td>
+<td align="center">Excel文件</td>
+</tr>
+<tr>
+<td align="center">.xlsm</td>
+<td align="center">加载宏的Microsoft Excel文件</td>
+</tr>
+<tr>
+<td align="center">.ppt</td>
+<td align="center">ppt文件</td>
+</tr>
+<tr>
+<td align="center">.ppa</td>
+<td align="center">加载了宏的ppt文件</td>
+</tr>
+<tr>
+<td align="center">.jpg</td>
+<td align="center">图片文件</td>
+</tr>
+<tr>
+<td align="center">.bmp</td>
+<td align="center">Windows或OS&#x2F;2位图文件</td>
+</tr>
+<tr>
+<td align="center">.avi&#x2F;rmvb&#x2F;mp4</td>
+<td align="center">视频格式文件</td>
+</tr>
+<tr>
+<td align="center">.rar&#x2F;zip</td>
+<td align="center">压缩格式文件</td>
+</tr>
+<tr>
+<td align="center">.aac&#x2F;adt&#x2F;aiff</td>
+<td align="center">音频文件</td>
+</tr>
+<tr>
+<td align="center">.bin</td>
+<td align="center">二进制压缩文件</td>
+</tr>
+<tr>
+<td align="center">.aspx</td>
+<td align="center">ASP.NET Active Server 页面</td>
+</tr>
+<tr>
+<td align="center">.cda</td>
+<td align="center">CD 音频曲目</td>
+</tr>
+<tr>
+<td align="center">.flv</td>
+<td align="center">与 Flash 兼容的视频文件</td>
+</tr>
+<tr>
+<td align="center">.gif</td>
+<td align="center">图形交换格式文件</td>
+</tr>
+<tr>
+<td align="center">.htm&#x2F;html</td>
+<td align="center">超文本标记语言页面</td>
+</tr>
+<tr>
+<td align="center">.iso</td>
+<td align="center">光盘映像文件</td>
+</tr>
+<tr>
+<td align="center">.jar</td>
+<td align="center">Java 体系结构文件</td>
+</tr>
+<tr>
+<td align="center">.pptx</td>
+<td align="center">PowerPoint 演示文稿文件</td>
+</tr>
+<tr>
+<td align="center">.sldx</td>
+<td align="center">PowerPoint 幻灯片文件</td>
+</tr>
+<tr>
+<td align="center">.sldm</td>
+<td align="center">加载宏的 Microsoft PowerPoint 幻灯片文件</td>
+</tr>
+<tr>
+<td align="center">.sys</td>
+<td align="center">Microsoft DOS 和 Windows 系统设置和变量文件</td>
+</tr>
+<tr>
+<td align="center">.tmp</td>
+<td align="center">临时数据文件</td>
+</tr>
+<tr>
+<td align="center">.vsd</td>
+<td align="center">Visio 绘图</td>
+</tr>
+<tr>
+<td align="center">.vsdm</td>
+<td align="center">加载宏的 Microsoft Visio 绘图</td>
+</tr>
+<tr>
+<td align="center">.vsdx</td>
+<td align="center">Visio 绘图文件</td>
+</tr>
+<tr>
+<td align="center">.vss</td>
+<td align="center">Visio 模具</td>
+</tr>
+<tr>
+<td align="center">.vssm</td>
+<td align="center">加载宏的 Microsoft Visio 模具</td>
+</tr>
+<tr>
+<td align="center">.vst</td>
+<td align="center">Vision 模板</td>
+</tr>
+<tr>
+<td align="center">.vstm</td>
+<td align="center">加载宏的 Microsoft Visio 模板</td>
+</tr>
+<tr>
+<td align="center">.wbk</td>
+<td align="center">Word 备份文档</td>
+</tr>
+<tr>
+<td align="center">.wma</td>
+<td align="center">Media 音频文件</td>
+</tr>
+<tr>
+<td align="center">.wmd</td>
+<td align="center">Media 下载文件</td>
+</tr>
+<tr>
+<td align="center">.wmv</td>
+<td align="center">Media 视频文件</td>
+</tr>
+<tr>
+<td align="center">.wmz&#x2F;wms</td>
+<td align="center">Media 皮肤文件</td>
+</tr>
+<tr>
+<td align="center">.xla</td>
+<td align="center">Excel 加载项或宏文件</td>
+</tr>
+<tr>
+<td align="center">.xll</td>
+<td align="center">Excel 基于 DLL 的加载项</td>
+</tr>
+<tr>
+<td align="center">.xlt</td>
+<td align="center">Excel 模板</td>
+</tr>
+<tr>
+<td align="center">.xltm</td>
+<td align="center">加载宏的 Microsoft Excel 模板</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="Windows-常用快捷键"><a href="#Windows-常用快捷键" class="headerlink" title="Windows 常用快捷键"></a>Windows 常用快捷键</h3><h4 id="Ctrl-系列"><a href="#Ctrl-系列" class="headerlink" title="Ctrl + 系列"></a>Ctrl + 系列</h4><table>
+<thead>
+<tr>
+<th align="center">按键</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl + z</td>
+<td align="center">撤销</td>
+</tr>
+<tr>
+<td align="center">Ctrl + c</td>
+<td align="center">复制</td>
+</tr>
+<tr>
+<td align="center">Ctrl + x</td>
+<td align="center">剪切</td>
+</tr>
+<tr>
+<td align="center">Ctrl + v</td>
+<td align="center">粘贴</td>
+</tr>
+<tr>
+<td align="center">Ctrl + a</td>
+<td align="center">全选</td>
+</tr>
+<tr>
+<td align="center">Ctrl + $\uparrow$</td>
+<td align="center">将光标移动到上一段落起始处</td>
+</tr>
+<tr>
+<td align="center">Ctrl + $\downarrow$</td>
+<td align="center">将光标移动到下一段落起始处</td>
+</tr>
+<tr>
+<td align="center">Ctrl + d</td>
+<td align="center">删除所选目标(文件、文件夹等)，置于回收站</td>
+</tr>
+<tr>
+<td align="center">Ctrl + f</td>
+<td align="center">在任何大量文字网页或 bai 文档内等等，快速找到位置</td>
+</tr>
+<tr>
+<td align="center">Ctrl + n</td>
+<td align="center">新建窗口</td>
+</tr>
+<tr>
+<td align="center">Ctrl + w</td>
+<td align="center">关闭获得窗口</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Tab</td>
+<td align="center">选项卡向前移动</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + Tab</td>
+<td align="center">选项卡向后移动</td>
+</tr>
+<tr>
+<td align="center">Ctrl + 数字（1~9）</td>
+<td align="center">移动到第n个选项卡</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + n</td>
+<td align="center">新建文件夹</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + Esc</td>
+<td align="center">打开任务管理器</td>
+</tr>
+<tr>
+<td align="center">Ctrl + Shift + Delete</td>
+<td align="center">打开任务管理器</td>
+</tr>
+</tbody></table>
+<h4 id="Win-系列"><a href="#Win-系列" class="headerlink" title="Win + 系列"></a>Win + 系列</h4><table>
+<thead>
+<tr>
+<th align="center">按键</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">win</td>
+<td align="center">打开或关闭”开始”菜单栏</td>
+</tr>
+<tr>
+<td align="center">win + D</td>
+<td align="center">显示桌面</td>
+</tr>
+<tr>
+<td align="center">win + E</td>
+<td align="center">打开资源管理器（此电脑）</td>
+</tr>
+<tr>
+<td align="center">win + R</td>
+<td align="center">打开”运行”对话框</td>
+</tr>
+<tr>
+<td align="center">win + $\uparrow$</td>
+<td align="center">放大当前窗口</td>
+</tr>
+<tr>
+<td align="center">win + $\downarrow$</td>
+<td align="center">缩小当前窗口</td>
+</tr>
+<tr>
+<td align="center">win + $\leftarrow$</td>
+<td align="center">左侧屏幕最大窗口</td>
+</tr>
+<tr>
+<td align="center">win + $\rightarrow$</td>
+<td align="center">右侧屏幕最大窗口</td>
+</tr>
+<tr>
+<td align="center">win + Tab</td>
+<td align="center">打开任务视图，按 Tab 实现切换</td>
+</tr>
+<tr>
+<td align="center">win + F</td>
+<td align="center">打开“文件查找”对话框</td>
+</tr>
+<tr>
+<td align="center">win + L</td>
+<td align="center">锁定电脑或切换账号</td>
+</tr>
+<tr>
+<td align="center">win + M</td>
+<td align="center">最小化所有窗口</td>
+</tr>
+<tr>
+<td align="center">win + Shift + M</td>
+<td align="center">将所有最小化窗口还原</td>
+</tr>
+<tr>
+<td align="center">win  + U</td>
+<td align="center">打开轻松访问中心&#x2F;轻松访问</td>
+</tr>
+<tr>
+<td align="center">win + U + U</td>
+<td align="center">关机</td>
+</tr>
+<tr>
+<td align="center">win + U + R</td>
+<td align="center">重启</td>
+</tr>
+<tr>
+<td align="center">win + U + S</td>
+<td align="center">待机</td>
+</tr>
+<tr>
+<td align="center">win + 数字（1~9）</td>
+<td align="center">打开任务栏中第n个应用</td>
+</tr>
+</tbody></table>
+<h4 id="Alt-系列"><a href="#Alt-系列" class="headerlink" title="Alt + 系列"></a>Alt + 系列</h4><table>
+<thead>
+<tr>
+<th align="center">按键</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Alt + F4</td>
+<td align="center">关闭当前程序</td>
+</tr>
+<tr>
+<td align="center">Alt + Tab</td>
+<td align="center">在桌面进行窗口求换</td>
+</tr>
+<tr>
+<td align="center">Alt + Z</td>
+<td align="center">切换自动换行</td>
+</tr>
+<tr>
+<td align="center">Alt + F</td>
+<td align="center">打开文件菜单搜索</td>
+</tr>
+<tr>
+<td align="center">Alt + V</td>
+<td align="center">打开视图菜单</td>
+</tr>
+<tr>
+<td align="center">Alt + O</td>
+<td align="center">打开格式菜单</td>
+</tr>
+<tr>
+<td align="center">Alt + W</td>
+<td align="center">关闭当前程序</td>
+</tr>
+<tr>
+<td align="center">Alt + $\leftarrow$</td>
+<td align="center">返回</td>
+</tr>
+<tr>
+<td align="center">Alt + $\rightarrow$</td>
+<td align="center">前进</td>
+</tr>
+</tbody></table>
+<h4 id="Shift-系列"><a href="#Shift-系列" class="headerlink" title="Shift + 系列"></a>Shift + 系列</h4><table>
+<thead>
+<tr>
+<th align="center">按键</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Shift + F3</td>
+<td align="center">切换字母大写</td>
+</tr>
+<tr>
+<td align="center">Shift + Spacebar</td>
+<td align="center">切换输入法半全角</td>
+</tr>
+<tr>
+<td align="center">Shift + Ctrl + T</td>
+<td align="center">还原上次关闭的标签页</td>
+</tr>
+<tr>
+<td align="center">Shift + Del</td>
+<td align="center">永久删除文件</td>
+</tr>
+<tr>
+<td align="center">Shift + Ctrl + N</td>
+<td align="center">新建文件夹</td>
+</tr>
+<tr>
+<td align="center">Shift + F10</td>
+<td align="center">选中文件的右菜单</td>
+</tr>
+<tr>
+<td align="center">Shift + Tab</td>
+<td align="center">在选项之间往后移动</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="Windows文件结构"><a href="#Windows文件结构" class="headerlink" title="Windows文件结构"></a>Windows文件结构</h3><p>​	Windows目录的文件结构采用的是一种<strong>树形结构</strong>。树形结构指的是数据元素之间在“一对多”的关系数据结构，是一类重要的非线性数据结构。<br>    Windows目录树根节点为盘符，盘符常见包括（C、D、E）。A盘盘符为保留盘符，在Windows古老体系中用于3.5英寸软盘驱动器的使用，B盘盘符同样为保留盘符，用于5.25英寸软盘驱动器的使用。</p>
+<h4 id="C盘常见文件夹"><a href="#C盘常见文件夹" class="headerlink" title="C盘常见文件夹"></a>C盘常见文件夹</h4><ol>
+<li><h5 id="Documents-and-Settings-用户"><a href="#Documents-and-Settings-用户" class="headerlink" title="Documents and Settings&#x2F;用户"></a>Documents and Settings&#x2F;用户</h5></li>
+</ol>
+<p>  ​	Windows 7&#x2F;10中的“用户”文件夹其实就是XP中的Documents and Settings文件夹,这里储存了用户的设置，包括用户文档、上网浏览信息、 配置文件等数据。<br>      默认情况下位于系统分区根目录下,下包括:Administrator All Users、Default User、用户文件夹等。All Users针对所有用户，这里的更改对所有用户有效, Administrator针对系统管理员账户。</p>
+<pre><code> - 桌面
+
+ - 开始菜单
+
+ - Application Data：通用应用程序数据文件夹
+
+ - Favorites：收藏夹
+
+ - Local Settings：保存应用程序数据、历史和临时文件，可清理
+
+ - My Documents：我的文档
+
+
+  另外C盘还有以下文件，一般是隐藏状态:
+</code></pre>
+<p>​	- Temp: 存放系统或其他软件临时文件，经常清理。</p>
+<p>​	- hiberfil.sys: 系统的休眠功能所占用的硬盘空间的文件，不建议删除。</p>
+<p>​	- .pagefile.sys: 虚拟内存页面文件,不建议删除。</p>
+<p>​	- PerfLogs:Windows 7&#x2F;10系统日志，记录如磁盘扫描错误等信息，没有必要删除。</p>
+<ol start="2">
+<li><h5 id="Program-Files"><a href="#Program-Files" class="headerlink" title="Program Files"></a>Program Files</h5></li>
+</ol>
+<p>  ​	应用程序文件夹。</p>
+<p>  ​	一般软件默认都安装在这里，也有一些系统自带的应用程序。在Windows7系统中，64位用户会多出一个Program Files (X86) 文件夹，这是系统中32位软件的安装录。<br>      Program Files和Program Files (x86)这两个录都是软件程序目录, -般来说，这个目录是存放安装软件的目录的。其中Program Files目录为64位程序默认安装目录, Program Files(x86)为32位程序默认安装目录。为什么32位的系统没有Program Files目录呢，因为Program Files默认就是当前位数系统的默认安装目录啦。<br>      那么，64位系统Program Files (x86)目录的作用是:没乱用，就是用来区分的位数的,但是不安装在这个目录也行。<br>      32位程序需要访问Program Files或者System32中的系统文件时，系统会自动转向到Program Files (x86)或者SysWoW64中。<br>      以64位软件为例，所有安装程序的默认的安装目录为C:\Program Files。</p>
+<ol start="3">
+<li><h5 id="Program-Files常见文件夹"><a href="#Program-Files常见文件夹" class="headerlink" title="Program Files常见文件夹"></a>Program Files常见文件夹</h5></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">文件夹</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Common Files</td>
+<td align="center">共用程序文件夹，于系列不同程序软件共同使用或调用数据，比如微软和Adobe的各种软件</td>
+</tr>
+<tr>
+<td align="center">ComPlus Applications</td>
+<td align="center">微软COM +组件使用的文件夹，删除后可能引起COM+组件不能运行</td>
+</tr>
+<tr>
+<td align="center">DIFX</td>
+<td align="center">DIFX是一种高效的XML索引方法，此文件夹与数据索引有关,不可以删除</td>
+</tr>
+<tr>
+<td align="center">NstallShield Installation Information</td>
+<td align="center">专门存储安装程序信息的文件夹，用于某些程序的卸载和更新</td>
+</tr>
+<tr>
+<td align="center">MSECache</td>
+<td align="center">MS Office运行时自动创建</td>
+</tr>
+<tr>
+<td align="center">MSXML6.0</td>
+<td align="center">微软XML解析器程序的文件夹</td>
+</tr>
+<tr>
+<td align="center">Microsoft FrontPage</td>
+<td align="center">FrontPage是微软推出的一款网页设计软件,此文件夹通常为空</td>
+</tr>
+<tr>
+<td align="center">Movie Maker</td>
+<td align="center">系统自带的一款视频编辑软件</td>
+</tr>
+<tr>
+<td align="center">Outlook Express</td>
+<td align="center">是Windows内置的邮件收发端，不用可删</td>
+</tr>
+<tr>
+<td align="center">Online Services</td>
+<td align="center">网络服务文件夹，不能删</td>
+</tr>
+<tr>
+<td align="center">Windows Media Player</td>
+<td align="center">系统自带的一款多媒体播放器</td>
+</tr>
+<tr>
+<td align="center">Xerox</td>
+<td align="center">用作自带的一些图像处理软件的临时空间, 文件夹不能删除，但通常为空</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li><h5 id="Program-Data"><a href="#Program-Data" class="headerlink" title="Program Data"></a>Program Data</h5></li>
+</ol>
+<p>  Program Data目录位程序数据目录，这个目录是隐藏的，需要设置查看隐藏文件夹才能看到。这个目录也是垃圾文件的重灾区，很多程序的配置都在这儿，并且很多软件卸载后并没有删除配置，需要我们手动删除。<br>      目录有类似于{7F40DE3E-8294-4E24- B2EA-80F6C6BB173C}名字的文件，看起来不太友好，这个目录并不是所谓的病毒目录，这个是软件的唯一标示GUID，有些软件为了区分，会生成一个唯一的名称以保证唯一 性，那么这个目录，就是软件为区分同名软件所创建的唯一配置文件保存目录,且这个软件的注册表，很有可能也是这个名称。<br>      大部分的文件夹还是挺好识别的，比如Adobe目录保存了常用的设计软件如PS,Al,AE等软件配置，Tencent保存了qq和微信等软件的配置。</p>
+<ol start="5">
+<li><h5 id="Windows系统文件夹"><a href="#Windows系统文件夹" class="headerlink" title="Windows系统文件夹"></a>Windows系统文件夹</h5></li>
+</ol>
+<p>  ​	在Windows目录中，我们可以看到熟悉的软件，你的桌面，其实是一个软件， 全名叫文件资源管理器，也就是explorer.exe, 我们如果结束这个程序的进程，可能你的桌面就消失了。还有regedit.exe，注册表编辑器，notepad.exe，记事本等系统程序。</p>
+<p>  ​	在Windows目录中，我们可以看到熟悉的软件，你的桌面，其实是一个软件， 全名叫文件资源管理器，也就是explorer.exe, 我们如果结束这个程序的进程，可能你的桌面就消失了。还有regedit.exe，注册表编辑器，notepad.exe，记事本等系统程序。</p>
+<ol start="6">
+<li><h5 id="Windows系统临时目录"><a href="#Windows系统临时目录" class="headerlink" title="Windows系统临时目录"></a>Windows系统临时目录</h5></li>
+</ol>
+<p>  ​	临时文件目录隐藏的很深,我们很难找到，在C:\Users\当前用户\AppData\Local\Temp目录下，很多垃圾文件也会在此，包括使用压缩软件等解压的临时文件也在这儿。快捷打开这个目录，win+ R调出运行窗口，输入%tmp%， 回车，即可打开。里面的文件可以删除。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://Dadajia-byte.github.io.git">Dadajia-byte</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://dadajia-byte.github.io.git/2023/10/13/Windows%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E5%9F%BA%E7%A1%80%E5%8F%8A%E7%BC%96%E8%BE%91%E5%99%A8%E5%9F%BA%E7%A1%80/">https://dadajia-byte.github.io.git/2023/10/13/Windows%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E5%9F%BA%E7%A1%80%E5%8F%8A%E7%BC%96%E8%BE%91%E5%99%A8%E5%9F%BA%E7%A1%80/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://Dadajia-byte.github.io.git" target="_blank">哒哒佳</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%9F%BA%E7%A1%80/">基础</a><a class="post-meta__tags" href="/tags/windows%E6%93%8D%E4%BD%9C/">windows操作</a></div><div class="post_share"><div class="social-share" data-image="/img/dahuai.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/dahuai.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Dadajia-byte</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Dadajia-byte"><i class="fab fa-github"></i><span>...前往小家...</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Dadajia-byte" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1814650097@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows-%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E5%9F%BA%E7%A1%80"><span class="toc-text">Windows 桌面操作基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="toc-text">学习目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-%E7%AE%80%E4%BB%8B"><span class="toc-text">Windows 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%91%E5%B1%95%E5%8F%B2"><span class="toc-text">发展史</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%88%AB"><span class="toc-text">类别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-text">特点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E6%8B%93%E5%B1%95%E5%90%8D"><span class="toc-text">Windows常见文件拓展名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">Windows 常用快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Ctrl-%E7%B3%BB%E5%88%97"><span class="toc-text">Ctrl + 系列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Win-%E7%B3%BB%E5%88%97"><span class="toc-text">Win + 系列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Alt-%E7%B3%BB%E5%88%97"><span class="toc-text">Alt + 系列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Shift-%E7%B3%BB%E5%88%97"><span class="toc-text">Shift + 系列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-text">Windows文件结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#C%E7%9B%98%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">C盘常见文件夹</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Documents-and-Settings-%E7%94%A8%E6%88%B7"><span class="toc-text">Documents and Settings&#x2F;用户</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Program-Files"><span class="toc-text">Program Files</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Program-Files%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">Program Files常见文件夹</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Program-Data"><span class="toc-text">Program Data</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Windows%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">Windows系统文件夹</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Windows%E7%B3%BB%E7%BB%9F%E4%B8%B4%E6%97%B6%E7%9B%AE%E5%BD%95"><span class="toc-text">Windows系统临时目录</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/13/Windows%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E5%9F%BA%E7%A1%80%E5%8F%8A%E7%BC%96%E8%BE%91%E5%99%A8%E5%9F%BA%E7%A1%80/" title="Windows桌面操作基础">Windows桌面操作基础</a><time datetime="2023-10-13T03:36:34.000Z" title="发表于 2023-10-13 11:36:34">2023-10-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Dadajia-byte</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
